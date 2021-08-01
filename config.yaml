@@ -1,5 +1,5 @@
 theme: "hugo-PaperMod"
-baseURL: http://example.org/
+baseURL: https://haivo.netlify.app
 languageCode: en-us
 title: Hai blogs
 menu:
