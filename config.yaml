@@ -1,0 +1,36 @@
+theme: "hugo-PaperMod"
+baseURL: http://example.org/
+languageCode: en-us
+title: Hai blogs
+menu:
+    main:
+        - identifier: Post
+          name: Post
+          url: /post/
+          weight: 10
+        - identifier: Resume
+          name: Resume
+          url: /static/pdf/cv.pdf
+          weight: 10
+        - identifier: Github
+          name: Github
+          url: "https://github.com/vohai611"
+          
+Params:
+    ShowReadingTime: true
+    ShowToc: true
+    ShowCodeCopyButtons: true
+    ShowBreadCrumbs: true
+    homeInfoParams:
+         Title: "Welcome!"
+         Content: >
+              - Xin chào! Đây là một blog về R và Data Science
+              
+              - Blog này được viết dựa trên R::blogdown 
+              
+              - Hugo theme - **PaperMod** [Paper](https://github.com/nanxiaobei/hugo-paper).
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

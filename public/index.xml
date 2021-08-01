@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hai blogs</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Hai blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xin chào!</title>
+      <link>http://example.org/post/2021-08-01-xin-ch%C3%A0o/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/2021-08-01-xin-ch%C3%A0o/</guid>
+      <description>Hello world! Xin chào đến với blog của tôi. Blog chủ yếu sẽ viết về Datascience và R
+library(tidyverse) diamonds %&amp;gt;% head(10) %&amp;gt;% knitr::kable()   carat cut color clarity depth table price x y z    0.23 Ideal E SI2 61.5 55 326 3.95 3.98 2.43  0.21 Premium E SI1 59.8 61 326 3.89 3.84 2.31  0.23 Good E VS1 56.9 65 327 4.</description>
+    </item>
+    
+  </channel>
+</rss>
