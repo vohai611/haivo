@@ -6,7 +6,7 @@ menu:
     main:
         - identifier: post
           name: Post
-          url: /Post
+          url: /post
           weight: 1
         - identifier: Project
           name: Project
