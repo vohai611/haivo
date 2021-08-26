@@ -1,0 +1,22 @@
+---
+title: Vietnam statistic dashboard with R
+author: Hai Vo
+date: '2021-08-06'
+slug: []
+categories: [shiny]
+tags: []
+---
+
+In this project, I built an small Shiny (an R framework to build webapp) dashboard to visualize general statistic data of Vietnam. The source of data came from [Vietnam general statistics office](https://www.gso.gov.vn). 
+
+The dashboard now hosted on [](shinyapp.io) but it can be deploy on any others platform. You could browser my dashboard source code at this github [repo](). The repository also had a Docker file to run build the dashboard imagine.
+
+This is the screenshoot from the dashboard:
+
+![img](utils/dashboard.png)
+
+Link to dashboard:
+[Link](https://haivo.shinyapps.io/education-dashboard/?_ga=2.156786235.1071013727.1628281527-635358277.1628281527)
+
+Link to my short report on Vietnam company revenue and labor workforce
+[Link](https://rpubs.com/HaiVo/761217)

@@ -1,21 +1,29 @@
 theme: "hugo-PaperMod"
 baseURL: https://haivo.netlify.app
 languageCode: en-us
-title: Hai blogs
+title: Hai's blog
 menu:
     main:
-        - identifier: Post
+        - identifier: post
           name: Post
-          url: /post/
-          weight: 10
+          url: /Post
+          weight: 1
+        - identifier: Project
+          name: Project
+          url: /project
+          weight: 2
         - identifier: Resume
           name: Resume
           url: /static/pdf/cv.pdf
-          weight: 10
+          weight: 3
         - identifier: Github
           name: Github
           url: "https://github.com/vohai611"
-          
+          weight: 4
+        - identifier: Email
+          name: Email
+          url: "mailto:hai835559@gmail.com"
+          weight: 5
 Params:
     ShowReadingTime: true
     ShowToc: true
@@ -24,12 +32,14 @@ Params:
     homeInfoParams:
          Title: "Welcome!"
          Content: >
-              - Xin chào! Đây là một blog về R và Data Science
+              - Hi! I am a graduated student in Logistic and Supply chain management.
               
-              - Blog này được viết dựa trên R::blogdown 
+              - In my two year of master program, I found my interest on Data science and programming
               
-              - Hugo theme - **PaperMod** [Paper](https://github.com/nanxiaobei/hugo-paper).
-
+              - This is my personal blog about my personal project and also my random thought
+              
+              - You can found the source code of this blog on my github repository [here](https://github.com/vohai611/haivo)
+              
 markup:
   goldmark:
     renderer:
