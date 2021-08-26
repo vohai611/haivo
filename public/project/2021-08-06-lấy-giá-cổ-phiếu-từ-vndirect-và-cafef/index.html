@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>An R package to retrieve Vietnam stock data | Hai&#39;s blog</title>
+<meta name="keywords" content="stock" />
+<meta name="description" content="This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here
+Install To install this package, use:
+devtools::install_github(&#34;https://github.com/vohai611/vnstockr&#34;) Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame.">
+<meta name="author" content="Hai Vo">
+<link rel="canonical" href="https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.35cd0f65a15cafa92372b8313deef5960aae04b90ad722f2bbf509eb0468137e.css" integrity="sha256-Nc0PZaFcr6kjcrgxPe71lgquBLkK1yLyu/UJ6wRoE34=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://haivo.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://haivo.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haivo.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://haivo.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://haivo.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.86.1" />
+<meta property="og:title" content="An R package to retrieve Vietnam stock data" />
+<meta property="og:description" content="This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here
+Install To install this package, use:
+devtools::install_github(&#34;https://github.com/vohai611/vnstockr&#34;) Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/" /><meta property="article:section" content="project" />
+<meta property="article:published_time" content="2021-08-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-06T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="An R package to retrieve Vietnam stock data"/>
+<meta name="twitter:description" content="This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here
+Install To install this package, use:
+devtools::install_github(&#34;https://github.com/vohai611/vnstockr&#34;) Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Projects",
+      "item": "https://haivo.netlify.app/project/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "An R package to retrieve Vietnam stock data",
+      "item": "https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "An R package to retrieve Vietnam stock data",
+  "name": "An R package to retrieve Vietnam stock data",
+  "description": "This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here\nInstall To install this package, use:\ndevtools::install_github(\u0026#34;https://github.com/vohai611/vnstockr\u0026#34;) Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame.",
+  "keywords": [
+    "stock"
+  ],
+  "articleBody": "This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here\nInstall To install this package, use:\ndevtools::install_github(\"https://github.com/vohai611/vnstockr\") Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame. For example:\nlibrary(vnstockr) get_vndirect('ACB', '1/1/2021', '1/12/2021') ## # A tibble: 147 × 25 ## code date time floor type basicPrice ceilingPrice floorPrice open ##          ## 1 ACB 2021-08-06 15:08:… HOSE STOCK 36 38.5 33.5 36.1 ## 2 ACB 2021-08-05 15:08:… HOSE STOCK 35.5 38.0 33.0 35.4 ## 3 ACB 2021-08-04 15:08:… HOSE STOCK 35.8 38.3 33.3 36 ## 4 ACB 2021-08-03 15:08:… HOSE STOCK 35.6 38 33.1 35.4 ## 5 ACB 2021-08-02 15:08:… HOSE STOCK 36.2 38.6 33.6 35.5 ## 6 ACB 2021-07-30 15:07:… HOSE STOCK 34.2 36.5 31.8 34.3 ## 7 ACB 2021-07-29 15:07:… HOSE STOCK 33.2 35.4 30.8 33.4 ## 8 ACB 2021-07-28 15:07:… HOSE STOCK 33.2 35.4 30.8 33.2 ## 9 ACB 2021-07-27 15:07:… HOSE STOCK 32.7 35.0 30.4 33.0 ## 10 ACB 2021-07-26 15:07:… HOSE STOCK 33 35.3 30.7 32.6 ## # … with 137 more rows, and 16 more variables: high , low , ## # close , average , adOpen , adHigh , adLow , ## # adClose , adAverage , nmVolume , nmValue , ## # ptVolume , ptValue , change , adChange , ## # pctChange  Note get_cafeF() have to send multiple POST requests to cafef.vn, hence the speed is much slower than get_vndirect() which is only send one request. It also have higher chance of break in the future.\n",
+  "wordCount" : "308",
+  "inLanguage": "en",
+  "datePublished": "2021-08-06T00:00:00Z",
+  "dateModified": "2021-08-06T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Hai Vo"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hai's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://haivo.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://haivo.netlify.app" accesskey="h" title="Hai&#39;s blog (Alt + H)">Hai&#39;s blog</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://haivo.netlify.app/post" title="Post">
+                    <span>Post</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://haivo.netlify.app/project" title="Project">
+                    <span>Project</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://haivo.netlify.app/static/pdf/cv.pdf" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/vohai611" title="Github">
+                    <span>Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:hai835559@gmail.com" title="Email">
+                    <span>Email</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://haivo.netlify.app">Home</a>&nbsp;»&nbsp;<a href="https://haivo.netlify.app/project/">Projects</a></div>
+    <h1 class="post-title">
+      An R package to retrieve Vietnam stock data
+    </h1>
+    <div class="post-meta">August 6, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Hai Vo
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <div class="details">Table of Contents</div>
+        </summary>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#install" aria-label="Install">Install</a></li>
+                <li>
+                    <a href="#usage" aria-label="Usage">Usage</a></li>
+                <li>
+                    <a href="#note" aria-label="Note">Note</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of <code>httr</code> package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code <a href="https://github.com/vohai611/vnstockr">here</a></p>
+<h1 id="install">Install<a hidden class="anchor" aria-hidden="true" href="#install">#</a></h1>
+<p>To install this package, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">devtools<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#e6db74">&#34;https://github.com/vohai611/vnstockr&#34;</span>)
+</code></pre></div><h1 id="usage">Usage<a hidden class="anchor" aria-hidden="true" href="#usage">#</a></h1>
+<p>This package only contain two function <code>get_cafeF()</code> and <code>get_vndirect()</code>. User just need to specify stock code (symbol) and time frame. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(vnstockr)
+<span style="color:#a6e22e">get_vndirect</span>(<span style="color:#e6db74">&#39;ACB&#39;</span>, <span style="color:#e6db74">&#39;1/1/2021&#39;</span>, <span style="color:#e6db74">&#39;1/12/2021&#39;</span>)
+</code></pre></div><pre><code>## # A tibble: 147 × 25
+##    code  date       time    floor type  basicPrice ceilingPrice floorPrice  open
+##    &lt;chr&gt; &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;
+##  1 ACB   2021-08-06 15:08:… HOSE  STOCK       36           38.5       33.5  36.1
+##  2 ACB   2021-08-05 15:08:… HOSE  STOCK       35.5         38.0       33.0  35.4
+##  3 ACB   2021-08-04 15:08:… HOSE  STOCK       35.8         38.3       33.3  36  
+##  4 ACB   2021-08-03 15:08:… HOSE  STOCK       35.6         38         33.1  35.4
+##  5 ACB   2021-08-02 15:08:… HOSE  STOCK       36.2         38.6       33.6  35.5
+##  6 ACB   2021-07-30 15:07:… HOSE  STOCK       34.2         36.5       31.8  34.3
+##  7 ACB   2021-07-29 15:07:… HOSE  STOCK       33.2         35.4       30.8  33.4
+##  8 ACB   2021-07-28 15:07:… HOSE  STOCK       33.2         35.4       30.8  33.2
+##  9 ACB   2021-07-27 15:07:… HOSE  STOCK       32.7         35.0       30.4  33.0
+## 10 ACB   2021-07-26 15:07:… HOSE  STOCK       33           35.3       30.7  32.6
+## # … with 137 more rows, and 16 more variables: high &lt;dbl&gt;, low &lt;dbl&gt;,
+## #   close &lt;dbl&gt;, average &lt;dbl&gt;, adOpen &lt;dbl&gt;, adHigh &lt;dbl&gt;, adLow &lt;dbl&gt;,
+## #   adClose &lt;dbl&gt;, adAverage &lt;dbl&gt;, nmVolume &lt;dbl&gt;, nmValue &lt;dbl&gt;,
+## #   ptVolume &lt;dbl&gt;, ptValue &lt;dbl&gt;, change &lt;dbl&gt;, adChange &lt;dbl&gt;,
+## #   pctChange &lt;dbl&gt;
+</code></pre><h1 id="note">Note<a hidden class="anchor" aria-hidden="true" href="#note">#</a></h1>
+<p><code>get_cafeF()</code> have to send multiple POST requests to cafef.vn, hence the speed is much slower than <code>get_vndirect()</code> which is only send one request. It also have higher chance of break in the future.</p>
+
+
+  </div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://haivo.netlify.app/tags/stock/">stock</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://haivo.netlify.app">Hai&#39;s blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

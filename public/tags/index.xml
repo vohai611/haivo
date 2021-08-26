@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Hai blogs</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on Hai blogs</description>
+    <title>Tags on Hai&#39;s blog</title>
+    <link>https://haivo.netlify.app/tags/</link>
+    <description>Recent content in Tags on Hai&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haivo.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API</title>
+      <link>https://haivo.netlify.app/tags/api/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haivo.netlify.app/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>httr</title>
+      <link>https://haivo.netlify.app/tags/httr/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haivo.netlify.app/tags/httr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stock</title>
+      <link>https://haivo.netlify.app/tags/stock/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haivo.netlify.app/tags/stock/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

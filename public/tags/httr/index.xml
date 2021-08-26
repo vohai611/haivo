@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>httr on Hai&#39;s blog</title>
+    <link>https://haivo.netlify.app/tags/httr/</link>
+    <description>Recent content in httr on Hai&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haivo.netlify.app/tags/httr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retrieve university entrance exam score</title>
+      <link>https://haivo.netlify.app/project/2021-08-06-diem-thi-thpt/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haivo.netlify.app/project/2021-08-06-diem-thi-thpt/</guid>
+      <description>University entrance exam is one of the most important exam of every Vietnamese student. This post present how to use R to send API request to retrieve full exam score in the whole country in 2021. The full script and data could be found at my github repository.
+How does it work There are several website provide web interface to get the score. In my script, I use two sources of data: https://diemthi.</description>
+    </item>
+    
+  </channel>
+</rss>
