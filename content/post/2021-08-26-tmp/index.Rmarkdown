@@ -5,7 +5,6 @@ date: '2021-08-26'
 slug: []
 categories: []
 tags: []
-draft: true
 ---
 # this is temp
 i just want to tell
