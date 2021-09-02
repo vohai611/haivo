@@ -23,29 +23,47 @@ This package only contain two function `get_cafeF()` and `get_vndirect()`. User 
 
 ```r
 library(vnstockr)
-get_vndirect('ACB', '1/1/2021', '1/12/2021')
+acb <- get_vndirect('ACB', '1/1/2021', '1/12/2021')
+acb
 ```
 
 ```
-## # A tibble: 147 × 25
+## # A tibble: 170 × 25
 ##    code  date       time    floor type  basicPrice ceilingPrice floorPrice  open
 ##    <chr> <date>     <chr>   <chr> <chr>      <dbl>        <dbl>      <dbl> <dbl>
-##  1 ACB   2021-08-06 15:08:… HOSE  STOCK       36           38.5       33.5  36.1
-##  2 ACB   2021-08-05 15:08:… HOSE  STOCK       35.5         38.0       33.0  35.4
-##  3 ACB   2021-08-04 15:08:… HOSE  STOCK       35.8         38.3       33.3  36  
-##  4 ACB   2021-08-03 15:08:… HOSE  STOCK       35.6         38         33.1  35.4
-##  5 ACB   2021-08-02 15:08:… HOSE  STOCK       36.2         38.6       33.6  35.5
-##  6 ACB   2021-07-30 15:07:… HOSE  STOCK       34.2         36.5       31.8  34.3
-##  7 ACB   2021-07-29 15:07:… HOSE  STOCK       33.2         35.4       30.8  33.4
-##  8 ACB   2021-07-28 15:07:… HOSE  STOCK       33.2         35.4       30.8  33.2
-##  9 ACB   2021-07-27 15:07:… HOSE  STOCK       32.7         35.0       30.4  33.0
-## 10 ACB   2021-07-26 15:07:… HOSE  STOCK       33           35.3       30.7  32.6
-## # … with 137 more rows, and 16 more variables: high <dbl>, low <dbl>,
+##  1 ACB   2021-09-10 15:09:… HOSE  STOCK       32.4         34.7       30.2  32.5
+##  2 ACB   2021-09-09 15:09:… HOSE  STOCK       32.2         34.4       29.9  32  
+##  3 ACB   2021-09-08 15:09:… HOSE  STOCK       32.5         34.8       30.2  32.5
+##  4 ACB   2021-09-07 15:09:… HOSE  STOCK       32.0         34.2       29.8  32.4
+##  5 ACB   2021-09-06 15:09:… HOSE  STOCK       32           34.2       29.8  32.2
+##  6 ACB   2021-09-01 15:09:… HOSE  STOCK       32           34.2       29.8  32  
+##  7 ACB   2021-08-31 15:08:… HOSE  STOCK       32.2         34.4       29.9  32.5
+##  8 ACB   2021-08-30 15:08:… HOSE  STOCK       31.8         34.0       29.6  31.8
+##  9 ACB   2021-08-27 15:08:… HOSE  STOCK       32.0         34.2       29.8  31.7
+## 10 ACB   2021-08-26 15:08:… HOSE  STOCK       32.4         34.7       30.2  32.6
+## # … with 160 more rows, and 16 more variables: high <dbl>, low <dbl>,
 ## #   close <dbl>, average <dbl>, adOpen <dbl>, adHigh <dbl>, adLow <dbl>,
 ## #   adClose <dbl>, adAverage <dbl>, nmVolume <dbl>, nmValue <dbl>,
 ## #   ptVolume <dbl>, ptValue <dbl>, change <dbl>, adChange <dbl>,
 ## #   pctChange <dbl>
 ```
+
+Data could be visualized with `ggplot2`:
+
+
+```r
+library(ggplot2)
+acb |>
+  ggplot(aes(date, close))+
+  geom_line()+
+  scale_x_date(date_breaks = "4 weeks")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 45, hjust =1))+
+  labs(x = NULL)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
 
 # Note
 `get_cafeF()` have to send multiple POST requests to cafef.vn, hence the speed is much slower than `get_vndirect()` which is only send one request. It also have higher chance of break in the future.

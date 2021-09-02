@@ -23,8 +23,24 @@ devtools::install_github("https://github.com/vohai611/vnstockr")
 This package only contain two function `get_cafeF()` and `get_vndirect()`. User just need to specify stock code (symbol) and time frame. For example:
 ```{r}
 library(vnstockr)
-get_vndirect('ACB', '1/1/2021', '1/12/2021')
+acb <- get_vndirect('ACB', '1/1/2021', '1/12/2021')
+acb
 ```
+
+Data could be visualized with `ggplot2`:
+
+```{r}
+library(ggplot2)
+acb |>
+  ggplot(aes(date, close))+
+  geom_line()+
+  scale_x_date(date_breaks = "4 weeks")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 45, hjust =1))+
+  labs(x = NULL)
+
+```
+
 
 # Note
 `get_cafeF()` have to send multiple POST requests to cafef.vn, hence the speed is much slower than `get_vndirect()` which is only send one request. It also have higher chance of break in the future.
