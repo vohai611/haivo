@@ -10,9 +10,13 @@ tags: [API, httr]
 
 
 
-University entrance exam is one of the most important exam of every Vietnamese student. This post present how to use R to send API request to retrieve full exam score in the whole country in 2021. The full script and data could be found at my github [repository](https://github.com/vohai611/diemthi-thpt-2021). 
+## Why
 
-# How does it work
+University entrance exam is one of the most important exam of every Vietnamese student. In the year of 2020, by analyzing exam score, people discover abnormal data point and then detect a serious cheating. 
+The full data is normally not public by the Education Department. However, anyone could get the exam result through multiple website by fill in correct candidate ID.
+This post present how to use R to send API request to retrieve full exam score in the whole country in 2021. The full script and data could be found at my github [repository](https://github.com/vohai611/diemthi-thpt-2021). 
+
+## How does it work
 There are several website provide web interface to get the score. In my script, I use two sources of data:
 https://diemthi.vnanet.vn and https://tienphong.vn/tra-cuu-diem-thi.tpo.
 
@@ -21,7 +25,7 @@ Under the hood, these two website use API to retrieve the data, and user can acc
 These two API take the student ID as input and provide full result of that student as output. Input are in the form {province_code}{student_id}. Province_code vary from 01 to 64, while the student_id are from 1 to the max number of student attend in the exam. For example, input = '01000001' is for student 1 from the province that had code 01 (Ha Noi).
 
 
-# Demonstration
+## Demonstration
 Option 1:
 
 ```r
@@ -91,7 +95,7 @@ get_score2('0100001') %>%
 |  9| 1000011| 6.0| 7.75| 8.2|   NA|   NA|   NA| 3.00| 7.25| 8.50|NA  |
 | 10| 1000010| 8.8| 6.25| 9.2| 8.75| 8.75| 3.00|   NA|   NA|   NA|NA  |
 
-In the script, I also exploit multi-core in my machine (4-cores) to send multiple request simultaneously by using `furrr` package (front-end to the `future` package). The use of parallel code yield around 3 times faster result (60 mins for nearly 1 millions result) compare with normal use.
+In the script, I also exploit multi-core in my machine (4-cores) to send multiple request simultaneously by using `{furrr}` package (front-end to the `{future}` package). The use of parallel code yield around 3 times faster result (60 mins for nearly 1 millions result) compare with normal use.
 
 Because the API sent me the province code instead of province name, I will need an extra step to get the province.
 
@@ -157,4 +161,11 @@ data %>%
 |01            | 1000091|  6.0| 6.50| 3.8|   NA|  NA|   NA| 4.50| 6.00| 8.00|Ha Noi   |
 |01            | 1000090|  8.4| 8.00| 9.2|   NA|  NA|   NA| 6.25| 8.50| 8.50|Ha Noi   |
 
+
+<style type="text/css">
+h2 {
+  color: #9EBA89;
+}
+
+</style>
 

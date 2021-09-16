@@ -8,13 +8,13 @@ tags: [R]
 draft: true
 ---
 
-# Giới thiệu 
+## Giới thiệu 
 Việc học một ngôn ngữ lập trình đã không còn xa lạ với bất kỳ ai muốn theo đuổi lĩnh vực data science. 
 - R và Python
 
 - các tài liệu về R
 
-# Sách
+## Sách
 Đối với mình sách là nguồn tài liệu quan trọng nhất và thường bị mọi người bỏ qua.
 Phàn dưới đây sẽ tổng hợp những sách mình thấy hay:
 - R for Data Science - Hadley Wickham: 
@@ -25,6 +25,10 @@ Phàn dưới đây sẽ tổng hợp những sách mình thấy hay:
 - Mastering shiny:
 
 
-
+<style type="text/css">
+h2 {
+  color: #9EBA89;
+}
+</style>
 
 
