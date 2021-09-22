@@ -25,6 +25,7 @@ menu:
           url: "mailto:hai835559@gmail.com"
           weight: 5
 Params:
+    defaultTheme: dark
     ShowReadingTime: true
     ShowToc: true
     ShowCodeCopyButtons: true
