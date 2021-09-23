@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Hai&#39;s blog</title>
-    <link>https://haivo.netlify.app/categories/</link>
+    <link>https://vohai.xyz/categories/</link>
     <description>Recent content in Categories on Hai&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haivo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://vohai.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>shiny</title>
-      <link>https://haivo.netlify.app/categories/shiny/</link>
+      <link>https://vohai.xyz/categories/shiny/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://haivo.netlify.app/categories/shiny/</guid>
+      <guid>https://vohai.xyz/categories/shiny/</guid>
       <description></description>
     </item>
     

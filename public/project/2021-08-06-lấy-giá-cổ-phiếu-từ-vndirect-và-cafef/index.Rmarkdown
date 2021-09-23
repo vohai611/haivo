@@ -6,28 +6,53 @@ slug: []
 categories: []
 tags: [stock]
 ---
-```{r setup, include=FALSE}
+```{r setup, include=FALSE} 
 knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE)
 ```
 
-This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of `httr` package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code [here](https://github.com/vohai611/vnstockr)
+## Why
+It is convenience to retrieve stock data to R because there are multiple package in R allow you to analyzing and run ML with time series such as `{modeltime}` `{fable}`. The`{tidyquant}` package made it simple by let user get stock data in Yahoo Finance to R in the "tidy" format. However, most of Vietnamese company does listed in Yahoo Finance, hence user must manual load the data into R before take advantage of other R packages.
 
-# Install
+This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect.com.vn. This package is the wrap around of `{httr}` package which send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code [here](https://github.com/vohai611/vnstockr)
+
+## Install
 
 To install this package, use:
 ```{r, eval=FALSE}
 devtools::install_github("https://github.com/vohai611/vnstockr")
 ```
 
-# Usage
+## Usage
 This package only contain two function `get_cafeF()` and `get_vndirect()`. User just need to specify stock code (symbol) and time frame. For example:
 ```{r}
 library(vnstockr)
-get_vndirect('ACB', '1/1/2021', '1/12/2021')
+acb <- get_vndirect('ACB', '1/5/2020', '1/5/2021')
+acb |>
+  head(5) |>
+  knitr::kable()
 ```
 
-# Note
-`get_cafeF()` have to send multiple POST requests to cafef.vn, hence the speed is much slower than `get_vndirect()` which is only send one request. It also have higher chance of break in the future.
+Data retrieve are in the same format as `{tidyquant}` package and could easily integrate with other R package quickly. For example, data could be visualized with `ggplot2`:
+
+```{r}
+library(ggplot2)
+acb |>
+  ggplot(aes(date, close))+
+  geom_line()+
+  scale_x_date(date_breaks = "4 weeks")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 45, hjust =1))+
+  labs(x = NULL)
+
+```
 
 
+##  Note
+`get_cafeF()` have to send multiple requests to cafef.vn, depend on the time frame user specified, therefore the speed is much slower compare with `get_vndirect()` which is only send one request.
+
+```{css echo=FALSE}
+h2 {
+  color: #9EBA89;
+}
+```
 

@@ -2,40 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Hai&#39;s blog</title>
-    <link>https://haivo.netlify.app/project/</link>
+    <link>https://vohai.xyz/project/</link>
     <description>Recent content in Projects on Hai&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haivo.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://vohai.xyz/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An R package to retrieve Vietnam stock data</title>
-      <link>https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/</link>
+      <link>https://vohai.xyz/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://haivo.netlify.app/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/</guid>
-      <description>This is my simple package that allow user to get the Vietnam stock data from cafef.vn and vndirect. This package is the wrap around of httr package to send request to these two data source and parse the respond to R data frame (tibble). You can browse the package source code here
-Install To install this package, use:
-devtools::install_github(&amp;#34;https://github.com/vohai611/vnstockr&amp;#34;) Usage This package only contain two function get_cafeF() and get_vndirect(). User just need to specify stock code (symbol) and time frame.</description>
+      <guid>https://vohai.xyz/project/2021-08-06-l%E1%BA%A5y-gi%C3%A1-c%E1%BB%95-phi%E1%BA%BFu-t%E1%BB%AB-vndirect-v%C3%A0-cafef/</guid>
+      <description>Why It is convenience to retrieve stock data to R because there are multiple package in R allow you to analyzing and run ML with time series such as {modeltime} {fable}. The{tidyquant} package made it simple by let user get stock data in Yahoo Finance to R in the &amp;ldquo;tidy&amp;rdquo; format. However, most of Vietnamese company does listed in Yahoo Finance, hence user must manual load the data into R before take advantage of other R packages.</description>
     </item>
     
     <item>
       <title>Retrieve university entrance exam score</title>
-      <link>https://haivo.netlify.app/project/2021-08-06-diem-thi-thpt/</link>
+      <link>https://vohai.xyz/project/2021-08-06-diem-thi-thpt/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://haivo.netlify.app/project/2021-08-06-diem-thi-thpt/</guid>
-      <description>University entrance exam is one of the most important exam of every Vietnamese student. This post present how to use R to send API request to retrieve full exam score in the whole country in 2021. The full script and data could be found at my github repository.
-How does it work There are several website provide web interface to get the score. In my script, I use two sources of data: https://diemthi.</description>
+      <guid>https://vohai.xyz/project/2021-08-06-diem-thi-thpt/</guid>
+      <description>Why University entrance exam is one of the most important exam of every Vietnamese student. In the year of 2020, by analyzing exam score, people discover abnormal data point and then detect a serious cheating. The full data is normally not public by the Education Department. However, anyone could get the exam result through multiple website by fill in correct candidate ID. This post present how to use R to send API request to retrieve full exam score in the whole country in 2021.</description>
     </item>
     
     <item>
       <title>Vietnam statistic dashboard with R</title>
-      <link>https://haivo.netlify.app/project/2021-08-06-vietnam-statistic-dashboard-with-r/</link>
+      <link>https://vohai.xyz/project/2021-08-06-vietnam-statistic-dashboard-with-r/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://haivo.netlify.app/project/2021-08-06-vietnam-statistic-dashboard-with-r/</guid>
+      <guid>https://vohai.xyz/project/2021-08-06-vietnam-statistic-dashboard-with-r/</guid>
       <description>In this project, I built an small Shiny (an R framework to build webapp) dashboard to visualize general statistic data of Vietnam. The source of data came from Vietnam general statistics office.
-The dashboard now hosted on  but it can be deploy on any others platform. You could browser my dashboard source code at this github repo. The repository also had a Docker file to run build the dashboard imagine.</description>
+The dashboard now hosted on shinyapps.is but it can be deploy on any others platform. You could browser my dashboard source code at this github repo. The repository also had a Docker file to build the dashboard imagine.</description>
     </item>
     
   </channel>
