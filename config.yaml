@@ -42,6 +42,14 @@ Params:
               - You can found the source code of this blog on my github repository [here](https://github.com/vohai611/haivo)
               
 markup:
+  highlight:
+    codeFences: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: true
+    style: 'nord'
+    tabWidth: 4
   goldmark:
     renderer:
       unsafe: true

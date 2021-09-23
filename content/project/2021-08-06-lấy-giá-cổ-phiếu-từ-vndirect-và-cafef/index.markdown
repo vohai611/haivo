@@ -5,7 +5,6 @@ date: '2021-08-06'
 slug: []
 categories: []
 tags: [stock]
-
 ---
 
 
@@ -27,30 +26,21 @@ This package only contain two function `get_cafeF()` and `get_vndirect()`. User 
 
 ```r
 library(vnstockr)
-acb <- get_vndirect('ACB', '1/1/2021', '1/12/2021')
-acb
+acb <- get_vndirect('ACB', '1/5/2020', '1/5/2021')
+acb |>
+  head(5) |>
+  knitr::kable()
 ```
 
-```
-## # A tibble: 174 × 25
-##    code  date       time    floor type  basicPrice ceilingPrice floorPrice  open
-##    <chr> <date>     <chr>   <chr> <chr>      <dbl>        <dbl>      <dbl> <dbl>
-##  1 ACB   2021-09-16 15:09:… HOSE  STOCK       31.2         33.4       29.0  31.2
-##  2 ACB   2021-09-15 15:09:… HOSE  STOCK       31.5         33.7       29.3  31.5
-##  3 ACB   2021-09-14 15:09:… HOSE  STOCK       31.9         34.1       29.7  31.8
-##  4 ACB   2021-09-13 15:09:… HOSE  STOCK       32.3         34.6       30.0  32.3
-##  5 ACB   2021-09-10 15:09:… HOSE  STOCK       32.4         34.7       30.2  32.5
-##  6 ACB   2021-09-09 15:09:… HOSE  STOCK       32.2         34.4       29.9  32  
-##  7 ACB   2021-09-08 15:09:… HOSE  STOCK       32.5         34.8       30.2  32.5
-##  8 ACB   2021-09-07 15:09:… HOSE  STOCK       32.0         34.2       29.8  32.4
-##  9 ACB   2021-09-06 15:09:… HOSE  STOCK       32           34.2       29.8  32.2
-## 10 ACB   2021-09-01 15:09:… HOSE  STOCK       32           34.2       29.8  32  
-## # … with 164 more rows, and 16 more variables: high <dbl>, low <dbl>,
-## #   close <dbl>, average <dbl>, adOpen <dbl>, adHigh <dbl>, adLow <dbl>,
-## #   adClose <dbl>, adAverage <dbl>, nmVolume <dbl>, nmValue <dbl>,
-## #   ptVolume <dbl>, ptValue <dbl>, change <dbl>, adChange <dbl>,
-## #   pctChange <dbl>
-```
+
+
+|code |date       |time     |floor |type  | basicPrice| ceilingPrice| floorPrice| open|  high|   low| close| average| adOpen| adHigh| adLow| adClose| adAverage| nmVolume|      nmValue| ptVolume|     ptValue| change| adChange| pctChange|
+|:----|:----------|:--------|:-----|:-----|----------:|------------:|----------:|----:|-----:|-----:|-----:|-------:|------:|------:|-----:|-------:|---------:|--------:|------------:|--------:|-----------:|------:|--------:|---------:|
+|ACB  |2021-04-29 |15:04:05 |HOSE  |STOCK |       33.8|        36.15|      31.45| 33.8| 34.65| 33.60| 34.65|   34.27|  27.04|  27.72| 26.88|   27.72|    27.416| 16646300| 570480100000|  1654000| 57334200000|   0.85|     0.68|    2.5148|
+|ACB  |2021-04-28 |15:04:02 |HOSE  |STOCK |       34.0|        36.35|      31.65| 33.5| 34.30| 33.40| 33.80|   33.82|  26.80|  27.44| 26.72|   27.04|    27.056|  5675200| 191953980000|   670000| 23630000000|  -0.20|    -0.16|   -0.5882|
+|ACB  |2021-04-27 |15:04:02 |HOSE  |STOCK |       33.3|        35.60|      31.00| 33.0| 34.00| 32.65| 34.00|   33.37|  26.40|  27.20| 26.12|   27.20|    26.696|  6393000| 213347290000|   149000|  5110700000|   0.70|     0.56|    2.1021|
+|ACB  |2021-04-26 |15:04:04 |HOSE  |STOCK |       33.4|        35.70|      31.10| 33.4| 33.40| 32.60| 33.30|   32.91|  26.72|  26.72| 26.08|   26.64|    26.328|  7119100| 234311370000|        0|           0|  -0.10|    -0.08|   -0.2994|
+|ACB  |2021-04-23 |15:04:04 |HOSE  |STOCK |       32.5|        34.75|      30.25| 32.4| 33.45| 32.10| 33.40|   32.81|  25.92|  26.76| 25.68|   26.72|    26.248|  6687700| 219451575000|   286800|  9941300000|   0.90|     0.72|    2.7692|
 
 Data retrieve are in the same format as `{tidyquant}` package and could easily integrate with other R package quickly. For example, data could be visualized with `ggplot2`:
 
@@ -77,3 +67,4 @@ h2 {
   color: #9EBA89;
 }
 </style>
+
