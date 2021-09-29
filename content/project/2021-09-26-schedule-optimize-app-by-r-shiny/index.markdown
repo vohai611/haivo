@@ -1,19 +1,24 @@
 ---
-title: Schedule optimizie app by R shiny
+title: Schedule optimize app by R shiny
 author: Hai Vo
 date: '2021-09-26'
 slug: []
 categories: []
-tags: []
+tags: [Optimization, shiny, ompr]
 ---
 
 ## Why
+![Screen shoot](app-screenshoot.png)
 
-The problem is simple and straight forward: I want to assign a schedule of (n) staffs to work for (m) days, each day have (t) shifts. Each worker have exact numeric preference for each shift. For example: 3 point for the best suite shift and "Busy" for the shift they can not attend.
+The problem is simple and straight forward: I want to assign a schedule of (n) staffs to work for (m) days, each day have (t) shifts.
+
+Each worker provide a personal sheet which show their level of preference for each shift. Base on that data, the optimizer will try to arrange correspond schedule.
+
+The preference are in the form of numeric number. For example: 3 for the best suite shift, 1 for less desire shift and "Busy" for the shift that they can not attend.
 
 The objective of model is to maximize total preference while still satisfied several constraint.
 
-I also want this program to have user interface so that any people can understand and use it.
+I also want this program to have a nice user interface so that any people can understand and use it.
 
 Link to app: [Shiny app](https://haivo.shinyapps.io/schedule-optimizer/)
 
@@ -30,11 +35,11 @@ So, there are two problem:
 
 This kind of problem is categorized as "Integer programming" and is able to solve by most solver such that Excel solver, AMPL, Lingo ...
 
-In R, there are a package `{ompr}` which allow user to write mixed integer linear programs directly in R on a mathematics way, it also possible to be programam with. This package than provide an API to multiple solver: GLPK, CPLEX, ...
+In R, there are a package `{ompr}` which allow user to write mixed integer linear programs directly in R on a mathematics way, it also possible to be program with. This package than provide an API to multiple solver: GLPK, CPLEX, ...
 
 ### Web app interface
 
-`{shiny}` is exactly what I need. It provide a framework that makes it easy to build interactive web apps straight from R. The app could be host on shinyapps.io, dockerizing or hosted on any server with `{shinyserver}`.
+`{shiny}` is exactly what I need. It provide a framework that makes it easy to build interactive web apps straight from R. The app could be host on shinyapps.io, dockerizing or on any server with the help of `{shinyserver}`.
 
 ## Summarise and future work
 
@@ -55,11 +60,11 @@ There are multiple constraint can be add to the app such that:
 Thank you for your reading! If you want to give me any feedback, email me at haingocvo96@gmail.com. 
 
 
-```{css echo=FALSE}
+<style type="text/css">
 h2 {
   color: #9EBA89;
 }
-```
+</style>
 
 
 
