@@ -33,13 +33,15 @@ Params:
     homeInfoParams:
          Title: "Welcome!"
          Content: >
-              - Hi! I am a graduated student in Logistic and Supply chain management.
+              - Hi! I am a graduated student in Logistic, Operation and Supply chain management.
               
-              - In my two year of master program, I found my interest on Data science and programming
+              - In my two year of master program, I found my interest on Data science and programming, especially, R programming language.
               
-              - This is my personal blog about my personal project and also my random thought
+              - This is a website where I present all my personal project on data science and operation problen. All of this project are on github. So, if you have any question on my project, please open an github issues or write me an email. 
               
-              - You can found the source code of this blog on my github repository [here](https://github.com/vohai611/haivo)
+              - Thank you!
+              
+              - This blog using [blogdown](https://github.com/rstudio/blogdown), you can browse source code of this website on my github [repository](https://github.com/vohai611/haivo)
               
 markup:
   highlight:
