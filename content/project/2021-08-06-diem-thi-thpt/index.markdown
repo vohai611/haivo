@@ -1,5 +1,5 @@
 ---
-title: Retrieve university entrance exam score
+title: Scrape university entrance exam score
 author: Hai Vo
 date: '2021-08-06'
 slug: []
@@ -166,6 +166,5 @@ data %>%
 h2 {
   color: #9EBA89;
 }
-
 </style>
 
