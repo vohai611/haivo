@@ -1,5 +1,5 @@
 ---
-title: Visualizing Capcitated Vehicle Routing Problem
+title: Visualizing Capacitated Vehicle Routing Problem
 author: Hai Vo
 date: '2021-10-20'
 slug: []
