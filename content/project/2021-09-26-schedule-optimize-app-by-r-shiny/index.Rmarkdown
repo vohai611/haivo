@@ -1,5 +1,8 @@
 ---
 title: Schedule optimize app by R shiny
+summary: 
+cover:
+  image: "cover.png"
 author: Hai Vo
 date: '2021-09-26'
 slug: []

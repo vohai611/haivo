@@ -1,5 +1,8 @@
 ---
-title: Visualizing Capacitated Vehicle Routing Problem
+title: Capacitated Vehicle Routing Problem
+summary: Solving, visualzing VRP using meta-heuristic algorithm
+cover:
+  image: "cover.png"
 author: Hai Vo
 date: '2021-10-20'
 slug: []
@@ -15,7 +18,7 @@ In this project, I try to implement:
 - genetic algorithm
 - simulated annealing 
 
-to find the solution for Capacitated Vehicle Routing Problem ([CVRP](https://en.wikipedia.org/wiki/Vehicle_routing_problem)). I using shiny to visualize the algorithm result on several benchmark data set. You can find all my code of shiny app on [github](https://github.com/vohai611/cvrp-genetic). Or visit my app [here](http://shiny.vohai.xyz/cvrp/)
+to find the solution for Capacitated Vehicle Routing Problem ([CVRP](https://en.wikipedia.org/wiki/Vehicle_routing_problem)). I using shiny to visualize the algorithm result on several benchmark data set. You can find all my code of shiny app on [github](https://github.com/vohai611/cvrp-genetic). Or visit my app [here](https://shiny.vohai.xyz/cvrp/)
 
 
 The picture below is a screenshot from the app:
