@@ -1,5 +1,9 @@
 ---
 title: Scrape university entrance exam score
+summary: Using {rvest} and {furrr} to scrape exam score in parallel
+cover: 
+  image: "cover.png"
+  caption: Density plot by subject score (2021)
 author: Hai Vo
 date: '2021-08-06'
 slug: []
