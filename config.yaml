@@ -1,5 +1,5 @@
 theme: "hugo-PaperMod"
-baseURL: https://www.vohai.xyz
+baseURL: https://vohai.xyz
 languageCode: en-us
 title: Hai's blog
 menu:
@@ -37,7 +37,7 @@ Params:
               
               - In my two year of master program, I found my interest on Data science and programming, especially, R programming language.
               
-              - This is a website where I present all my personal project on data science and operation problen. All of this project are on github. So, if you have any question on my project, please open an github issues or write me an email. 
+              - This is a website where I present all my personal project on data science and operation problem. All of this project are on github. So, if you have any question on my project, please open an github issues or write me an email. 
               
               - Thank you!
               
