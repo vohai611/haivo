@@ -1,6 +1,6 @@
 ---
 title: Schedule optimize app by R shiny
-summary: Customizable web app to optimze schedule working shifts 
+summary: Customizable web app to optimize schedule working shifts 
 cover:
   image: "cover.png"
 author: Hai Vo
@@ -9,6 +9,7 @@ slug: []
 categories: []
 tags: [Optimization, shiny, ompr]
 ---
+
 
 ## Why
 ![Screen shoot](app-screenshoot.png)

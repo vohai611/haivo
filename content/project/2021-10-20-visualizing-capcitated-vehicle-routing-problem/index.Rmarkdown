@@ -1,6 +1,6 @@
 ---
 title: Capacitated Vehicle Routing Problem
-summary: Solving, visualzing VRP using meta-heuristic algorithm
+summary: Solving, visualizing VRP using meta-heuristic algorithm
 cover:
   image: "cover.png"
 author: Hai Vo
